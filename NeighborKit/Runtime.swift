@@ -13,7 +13,7 @@ public private(set) var scene: WorldScene!
 public private(set) var worldView: WorldView!
 
 public private(set) var tick: Int64 = 0
-public var maxTicks: Int64? = nil
+public var maxTicks: Int64? = 1000
 
 public func setup(rows rows: Int, columns: Int) {
 	tick = 0

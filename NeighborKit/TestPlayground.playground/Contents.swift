@@ -18,8 +18,15 @@ world.addAgents(5, ofType: Turtle.self) { agent in
 	agent.position = (2, 2)
 }
 
-loop() { 
-	
+let turtle = world.agentsOfType(Turtle).first!
+
+loop() {
+	XCPlaygroundPage.currentPage.captureValue(turtle.position, withIdentifier: "position")
+	turtle.position.x += 1
 }
 
 let toggle = UISwitch()
+
+
+
+XCPlaygroundPage.currentPage.finishExecution()
