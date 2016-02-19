@@ -15,7 +15,7 @@ public class WorldView: SKView {
 	public init(grid: Grid) {
 		self.grid = grid
 		super.init(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 480, height: 480)))
-		for (row, column) in grid {
+		for (row, column) in self.grid {
 			
 		}
 	}

@@ -22,8 +22,25 @@ public struct Grid {
 // MARK: - SequenceType
 
 extension Grid: SequenceType {
-	public func generate() -> GridGenerator {
-		return GridGenerator(grid: self)
+	public func generate() -> AnyGenerator<GridPoint> {
+		var nextPoint: GridPoint = (0, 0)
+		return AnyGenerator<GridPoint> {
+			let nextRow: Int
+			let nextColumn: Int
+			if nextPoint.row == self.rows {
+				if nextPoint.column == self.columns {
+					return nil
+				} else {
+					nextRow = 0
+					nextColumn = nextPoint.column + 1
+				}
+			} else {
+				nextRow = nextPoint.row + 1
+				nextColumn = nextPoint.column
+			}
+			nextPoint = (nextRow, nextColumn) 
+			return nextPoint
+		}
 	}
 }
 
