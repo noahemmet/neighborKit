@@ -15,8 +15,9 @@ public private(set) var worldView: WorldView!
 public private(set) var tick: Int64 = 0
 public var maxTicks: Int64? = 1000
 
-public func setup(rows rows: Int, columns: Int) {
+public func setup(rows rows: Int, columns: Int, maxTicks maxTicksParam: Int64? = 1000) {
 	tick = 0
+	maxTicks = maxTicksParam
 	let size = WorldView.defaultSize
 	
 	scene = WorldScene(size: size, grid: Grid(rows: rows, columns: columns))

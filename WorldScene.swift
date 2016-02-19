@@ -51,12 +51,13 @@ public class WorldScene: SKScene {
 		let y = CGFloat(point.row) * patchSize.height + (patchSize.height / 2)
 		return CGPoint(x: x, y: y)
 	}
+	
 }
 
 extension WorldScene: WorldDelegate {
 	func world(world: World, didAddAgent agent: Agent) {
 		let agentSprite = AgentSprite(color: .orangeColor(), size: agentSize)
-		agentSprite.position = positionForGridPoint((agent.position.x, agent.position.y))
+		agentSprite.position = agent.position
 		addChild(agentSprite)
 	}
 }
