@@ -9,14 +9,16 @@
 import Foundation
 
 public private(set) var world: World!
-public private(set) var worldView: WorldView!
 public private(set) var scene: WorldScene!
+public private(set) var worldView: WorldView!
 
 
 public func setup(rows rows: Int, columns: Int) {
-	world = World()
 	let size = WorldView.defaultSize
+	
+	world = World()
 	scene = WorldScene(size: size, grid: Grid(rows: rows, columns: columns))
+	world.delegate = scene
 	worldView = WorldView(frame: CGRect(origin: CGPoint.zero, size: size))
 	worldView.presentScene(scene)
 }

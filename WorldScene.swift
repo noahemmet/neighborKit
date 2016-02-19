@@ -22,7 +22,8 @@ public class WorldScene: SKScene {
 		patchSize = CGSize(width: frame.size.width / CGFloat(grid.columns), height: frame.size.height / CGFloat(grid.rows))
 		agentSize = CGSize(width: patchSize.width / 2, height: patchSize.height / 2)
 		var red:  CGFloat = 0.2
-		var blue: CGFloat = 0.2
+		var blue: CGFloat = 0.8
+		let colorIncrement: CGFloat = 0.6 / CGFloat(grid.rows * grid.columns)
 		for point in self.grid {
 			if point.row == 0 {
 				patchViews.append([])
@@ -32,8 +33,8 @@ public class WorldScene: SKScene {
 			patchViews[point.column].append(patch)
 			patch.position = positionForGridPoint(point)
 			addChild(patch)
-			red += 0.005
-			blue += 0.005
+			red += colorIncrement
+			blue -= colorIncrement
 		}
 	}
 	
