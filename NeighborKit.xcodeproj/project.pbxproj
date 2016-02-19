@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861A51021C77C896003FEB1F /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861A51011C77C896003FEB1F /* CanvasView.swift */; };
+		861A51041C77C8F0003FEB1F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861A51031C77C8F0003FEB1F /* SettingsView.swift */; };
 		861D22471C769A3500F86FB3 /* NeighborKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 861D22461C769A3500F86FB3 /* NeighborKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		861D224E1C769A3500F86FB3 /* NeighborKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861D22431C769A3500F86FB3 /* NeighborKit.framework */; };
 		861D22531C769A3500F86FB3 /* NeighborKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22521C769A3500F86FB3 /* NeighborKitTests.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		861A51011C77C896003FEB1F /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		861A51031C77C8F0003FEB1F /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		861D22431C769A3500F86FB3 /* NeighborKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeighborKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		861D22461C769A3500F86FB3 /* NeighborKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeighborKit.h; sourceTree = "<group>"; };
 		861D22481C769A3500F86FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				861D22641C76A3A400F86FB3 /* Grid.swift */,
 				86B172BA1C76F02400A01EE9 /* Agent.swift */,
 				86E963131C76F3440011833A /* AgentSprite.swift */,
+				861A51011C77C896003FEB1F /* CanvasView.swift */,
+				861A51031C77C8F0003FEB1F /* SettingsView.swift */,
 			);
 			name = Classes;
 			path = ..;
@@ -265,9 +271,11 @@
 				86E963141C76F3440011833A /* AgentSprite.swift in Sources */,
 				86D42DE01C76E55000F81A74 /* WorldScene.swift in Sources */,
 				861D22611C769B1E00F86FB3 /* WorldView.swift in Sources */,
+				861A51041C77C8F0003FEB1F /* SettingsView.swift in Sources */,
 				86D42DE41C76EC1B00F81A74 /* PatchSprite.swift in Sources */,
 				86B172B91C76EDB500A01EE9 /* Runtime.swift in Sources */,
 				861D22651C76A3A400F86FB3 /* Grid.swift in Sources */,
+				861A51021C77C896003FEB1F /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
