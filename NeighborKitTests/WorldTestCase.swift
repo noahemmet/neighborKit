@@ -13,16 +13,18 @@ class WorldTestCase: XCTestCase {
 	
     func testAddAgents() {
 		let world = World()
-		world.addAgents(10, agentClosure: Agent())
+		world.addAgents(10, agentInit: Agent())
 		XCTAssertEqual(world.agents.count, 10)
 		
 		// subclass
 		class SubAgent: Agent { }
-		world.addAgents(5, agentClosure: SubAgent())
+		world.addAgents(5, agentInit: SubAgent())
 		XCTAssertEqual(world.agents.count, 15)
 		
-		// of type
+		world.addAgents(3, ofType: SubAgent.self)
+		
+		// filter
 		let filteredSubAgents = world.agentsOfType(SubAgent)
-		XCTAssertEqual(filteredSubAgents.count, 5)
+		XCTAssertEqual(filteredSubAgents.count, 8)
     }
 }

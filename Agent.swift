@@ -16,7 +16,7 @@ protocol AgentType {
 
 public class Agent {
 	private let uuid: UInt64
-	public init() {
+	public required init() {
 		uuid = uuidCounter
 		uuidCounter += 1
 	}

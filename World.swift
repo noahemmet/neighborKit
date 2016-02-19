@@ -26,11 +26,20 @@ public class World {
 		delegate?.world(self, didAddAgent: agent)
 	}
 	
-	public func addAgents(number: Int, @autoclosure agentClosure: () -> Agent) {
+	public func addAgents(number: Int, @autoclosure agentInit: () -> Agent) {
 		for _ in 0 ..< number {
-			let agent = agentClosure()
+			let agent = agentInit()
 			addAgent(agent)
 			delegate?.world(self, didAddAgent: agent)
+		}
+	}
+	
+	public func addAgents(number: Int, ofType: Agent.Type, configure: (Agent -> Void)? = nil) {
+		class SubAgent: Agent { }
+		let agents = (0..<number).map { _ in ofType.init() }
+		for agent in agents {
+			configure?(agent)
+			addAgent(agent)
 		}
 	}
 	
