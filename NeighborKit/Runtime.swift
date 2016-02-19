@@ -8,6 +8,8 @@
 
 import Foundation
 
+public let settings = Settings()
+
 public let world = World()
 public private(set) var scene: WorldScene!
 public private(set) var worldView: WorldView!

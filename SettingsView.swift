@@ -12,6 +12,8 @@ public class SettingsView: UIView {
 	private let tableView = UITableView()
 	public init() {
 		super.init(frame: CGRect(x: 0, y: 0, width: 480, height: 480))
+		settings.delegate = self
+		
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: String(UITableViewCell))
@@ -22,6 +24,7 @@ public class SettingsView: UIView {
 	public override func layoutSubviews() {
 		super.layoutSubviews()
 		tableView.frame = self.bounds
+		
 	}
 }
 
@@ -30,7 +33,7 @@ extension SettingsView: UITableViewDataSource, UITableViewDelegate {
 		return 1
 	}
 	public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return settings.settables.count
 	}
 	public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier(String(UITableViewCell), forIndexPath: indexPath)
@@ -39,6 +42,11 @@ extension SettingsView: UITableViewDataSource, UITableViewDelegate {
 	}
 }
 
+extension SettingsView: SettingsDelegate {
+	func settingsDidAddSettable(settings: Settings, settable: Settable) {
+		tableView.reloadData()
+	}
+}
 
 // MARK: - Settings Cell
 

@@ -23,6 +23,7 @@
 		86D42DE01C76E55000F81A74 /* WorldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DDF1C76E55000F81A74 /* WorldScene.swift */; };
 		86D42DE21C76E6A100F81A74 /* WorldSceneTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DE11C76E6A100F81A74 /* WorldSceneTestCase.swift */; };
 		86D42DE41C76EC1B00F81A74 /* PatchSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DE31C76EC1B00F81A74 /* PatchSprite.swift */; };
+		86E8A7C71C77D25700E18265 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8A7C61C77D25700E18265 /* Settings.swift */; };
 		86E963141C76F3440011833A /* AgentSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E963131C76F3440011833A /* AgentSprite.swift */; };
 		86E963161C76F4980011833A /* WorldTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E963151C76F4980011833A /* WorldTestCase.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		86D42DDF1C76E55000F81A74 /* WorldScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldScene.swift; sourceTree = "<group>"; };
 		86D42DE11C76E6A100F81A74 /* WorldSceneTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldSceneTestCase.swift; sourceTree = "<group>"; };
 		86D42DE31C76EC1B00F81A74 /* PatchSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatchSprite.swift; sourceTree = "<group>"; };
+		86E8A7C61C77D25700E18265 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		86E963131C76F3440011833A /* AgentSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSprite.swift; sourceTree = "<group>"; };
 		86E963151C76F4980011833A /* WorldTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 				86E963131C76F3440011833A /* AgentSprite.swift */,
 				861A51011C77C896003FEB1F /* CanvasView.swift */,
 				861A51031C77C8F0003FEB1F /* SettingsView.swift */,
+				86E8A7C61C77D25700E18265 /* Settings.swift */,
 			);
 			name = Classes;
 			path = ..;
@@ -275,6 +278,7 @@
 				86D42DE41C76EC1B00F81A74 /* PatchSprite.swift in Sources */,
 				86B172B91C76EDB500A01EE9 /* Runtime.swift in Sources */,
 				861D22651C76A3A400F86FB3 /* Grid.swift in Sources */,
+				86E8A7C71C77D25700E18265 /* Settings.swift in Sources */,
 				861A51021C77C896003FEB1F /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
