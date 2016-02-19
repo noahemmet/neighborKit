@@ -10,7 +10,6 @@ import XCTest
 import NeighborKit
 
 class GridTestCase: XCTestCase {
-	
 
     func testGenerator() {
 		let grid = Grid(rows: 10, columns: 10)
