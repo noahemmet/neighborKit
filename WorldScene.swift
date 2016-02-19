@@ -13,12 +13,14 @@ public class WorldScene: SKScene {
 	public let grid: Grid
 	public var patchViews: [[PatchSprite]] = [[]]
 	public var patchSize: CGSize = CGSize.zero
+	public var agentSize: CGSize = CGSize.zero
  
 	public init(size: CGSize, grid: Grid) {
 		self.grid = grid
 		super.init(size: size)
 		
 		patchSize = CGSize(width: frame.size.width / CGFloat(grid.columns), height: frame.size.height / CGFloat(grid.rows))
+		agentSize = CGSize(width: patchSize.width / 2, height: patchSize.height / 2)
 		var red:  CGFloat = 0.2
 		var blue: CGFloat = 0.2
 		for point in self.grid {
@@ -47,5 +49,12 @@ public class WorldScene: SKScene {
 		let x = CGFloat(point.column) * patchSize.width + (patchSize.width / 2)
 		let y = CGFloat(point.row) * patchSize.height + (patchSize.height / 2)
 		return CGPoint(x: x, y: y)
+	}
+}
+
+extension WorldScene: WorldDelegate {
+	func world(world: World, didAddAgent agent: Agent) {
+		let agentSprite = AgentSprite(color: .orangeColor(), size: agentSize)
+		addChild(agentSprite)
 	}
 }
