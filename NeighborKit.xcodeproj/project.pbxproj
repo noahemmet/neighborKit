@@ -13,6 +13,7 @@
 		861D22611C769B1E00F86FB3 /* WorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22601C769B1E00F86FB3 /* WorldView.swift */; };
 		861D22631C769FA800F86FB3 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22621C769FA800F86FB3 /* World.swift */; };
 		861D22651C76A3A400F86FB3 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22641C76A3A400F86FB3 /* Grid.swift */; };
+		861D22671C76B37300F86FB3 /* GridTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22661C76B37300F86FB3 /* GridTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		861D22601C769B1E00F86FB3 /* WorldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldView.swift; sourceTree = "<group>"; };
 		861D22621C769FA800F86FB3 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		861D22641C76A3A400F86FB3 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		861D22661C76B37300F86FB3 /* GridTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		861D22511C769A3500F86FB3 /* NeighborKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				861D22661C76B37300F86FB3 /* GridTestCase.swift */,
 				861D22521C769A3500F86FB3 /* NeighborKitTests.swift */,
 				861D22541C769A3500F86FB3 /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				861D22531C769A3500F86FB3 /* NeighborKitTests.swift in Sources */,
+				861D22671C76B37300F86FB3 /* GridTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

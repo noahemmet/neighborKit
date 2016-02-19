@@ -19,57 +19,31 @@ public struct Grid {
 	}
 }
 
-// MARK: - SequenceType
+// MARK: - SequenceType / AnyGenerator
 
 extension Grid: SequenceType {
 	public func generate() -> AnyGenerator<GridPoint> {
+		var isFirstElement = true
 		var nextPoint: GridPoint = (0, 0)
 		return AnyGenerator<GridPoint> {
-			let nextRow: Int
-			let nextColumn: Int
-			if nextPoint.row == self.rows {
-				if nextPoint.column == self.columns {
-					return nil
-				} else {
-					nextRow = 0
-					nextColumn = nextPoint.column + 1
-				}
-			} else {
-				nextRow = nextPoint.row + 1
-				nextColumn = nextPoint.column
+			if isFirstElement {
+				isFirstElement = false
+				return nextPoint
 			}
-			nextPoint = (nextRow, nextColumn) 
+			
+			if nextPoint.row == self.rows - 1 && nextPoint.column == self.columns - 1 {
+				// last row in last column
+				return nil
+			} else if nextPoint.row == self.rows - 1 {
+				// last row in a column
+				nextPoint.row = 0
+				nextPoint.column += 1
+			} else {
+				// a row in a column
+				nextPoint.row += 1
+			}
+			
 			return nextPoint
 		}
-	}
-}
-
-// MARK: - GeneratorType
-
-public struct GridGenerator: GeneratorType {
-	private let grid: Grid
-	private var nextPoint: GridPoint = (0, 0)
-	
-	public typealias Element = GridPoint
-	
-	init(grid: Grid) {
-		self.grid = grid
-	}
-	
-	public func next() -> GridPoint? {
-		let nextRow: Int
-		let nextColumn: Int
-		if nextPoint.row == grid.rows {
-			if nextPoint.column == grid.columns {
-				return nil
-			} else {
-				nextRow = 0
-				nextColumn = nextPoint.column + 1
-			}
-		} else {
-			nextRow = nextPoint.row + 1
-			nextColumn = nextPoint.column
-		}
-		return (nextRow, nextColumn)
 	}
 }
