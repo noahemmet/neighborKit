@@ -56,6 +56,7 @@ public class WorldScene: SKScene {
 extension WorldScene: WorldDelegate {
 	func world(world: World, didAddAgent agent: Agent) {
 		let agentSprite = AgentSprite(color: .orangeColor(), size: agentSize)
+		agentSprite.position = positionForGridPoint((agent.position.x, agent.position.y))
 		addChild(agentSprite)
 	}
 }

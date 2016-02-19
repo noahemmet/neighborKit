@@ -8,14 +8,14 @@
 
 import Foundation
 
-private var uuidCounter: UInt64 = 0
+public typealias Position = (x: Int, y: Int)
 
-protocol AgentType {
-	
-}
+private var uuidCounter: UInt64 = 0
 
 public class Agent {
 	private let uuid: UInt64
+	public var name: String = ""
+	public var position: Position = (x: 0, y: 0)
 	public required init() {
 		uuid = uuidCounter
 		uuidCounter += 1
