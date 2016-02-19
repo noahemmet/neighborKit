@@ -11,26 +11,15 @@ import SpriteKit
 
 public class WorldView: SKView {
 	public static let defaultSize = CGSize(width: 480, height: 480)
-	public let grid: Grid
- 
-	public init(grid: Grid) {
-		self.grid = grid
-		super.init(frame: CGRect(origin: CGPoint.zero, size: WorldView.defaultSize))
-		for gridPoint in self.grid {
-			print(gridPoint)
-		}
+	
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
 	}
 	
 	required public init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented")}
+	
 }
 
-private class WorldScene: SKScene {
-	private override func update(currentTime: NSTimeInterval) {
-		super.update(currentTime)
-		
-	}
-}
-
-public class PatchView: SKSpriteNode {
+public class PatchSprite: SKSpriteNode {
 	
 }

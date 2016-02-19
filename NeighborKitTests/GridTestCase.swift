@@ -12,13 +12,11 @@ import NeighborKit
 class GridTestCase: XCTestCase {
 	
 
-    func testExample() {
+    func testGenerator() {
 		let grid = Grid(rows: 10, columns: 10)
 		var count: Int = 0
-		for point in grid {
+		for _ in grid {
 			count += 1
-			print(count)
-			print(point)
 		}
 		XCTAssertEqual(count, grid.rows * grid.columns)
     }
