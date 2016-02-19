@@ -14,9 +14,11 @@
 		861D22631C769FA800F86FB3 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22621C769FA800F86FB3 /* World.swift */; };
 		861D22651C76A3A400F86FB3 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22641C76A3A400F86FB3 /* Grid.swift */; };
 		861D22671C76B37300F86FB3 /* GridTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22661C76B37300F86FB3 /* GridTestCase.swift */; };
+		86B172B91C76EDB500A01EE9 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B172B81C76EDB500A01EE9 /* Runtime.swift */; };
 		86D42DDE1C76E12400F81A74 /* WorldViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DDD1C76E12400F81A74 /* WorldViewTestCase.swift */; };
 		86D42DE01C76E55000F81A74 /* WorldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DDF1C76E55000F81A74 /* WorldScene.swift */; };
 		86D42DE21C76E6A100F81A74 /* WorldSceneTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DE11C76E6A100F81A74 /* WorldSceneTestCase.swift */; };
+		86D42DE41C76EC1B00F81A74 /* PatchSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42DE31C76EC1B00F81A74 /* PatchSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +43,11 @@
 		861D22621C769FA800F86FB3 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		861D22641C76A3A400F86FB3 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		861D22661C76B37300F86FB3 /* GridTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridTestCase.swift; sourceTree = "<group>"; };
+		86B172B81C76EDB500A01EE9 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 		86D42DDD1C76E12400F81A74 /* WorldViewTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewTestCase.swift; sourceTree = "<group>"; };
 		86D42DDF1C76E55000F81A74 /* WorldScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldScene.swift; sourceTree = "<group>"; };
 		86D42DE11C76E6A100F81A74 /* WorldSceneTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldSceneTestCase.swift; sourceTree = "<group>"; };
+		86D42DE31C76EC1B00F81A74 /* PatchSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatchSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		861D22451C769A3500F86FB3 /* NeighborKit */ = {
 			isa = PBXGroup;
 			children = (
+				86B172B71C76EDAB00A01EE9 /* Runtime */,
 				861D225D1C769A3E00F86FB3 /* Classes */,
 				861D225E1C769A4F00F86FB3 /* Playgrounds */,
 				861D22461C769A3500F86FB3 /* NeighborKit.h */,
@@ -112,6 +117,7 @@
 				861D22601C769B1E00F86FB3 /* WorldView.swift */,
 				86D42DDF1C76E55000F81A74 /* WorldScene.swift */,
 				861D22621C769FA800F86FB3 /* World.swift */,
+				86D42DE31C76EC1B00F81A74 /* PatchSprite.swift */,
 				861D22641C76A3A400F86FB3 /* Grid.swift */,
 			);
 			name = Classes;
@@ -124,6 +130,14 @@
 				861D225F1C769A7500F86FB3 /* TestPlayground.playground */,
 			);
 			name = Playgrounds;
+			sourceTree = "<group>";
+		};
+		86B172B71C76EDAB00A01EE9 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				86B172B81C76EDB500A01EE9 /* Runtime.swift */,
+			);
+			name = Runtime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,8 @@
 				861D22631C769FA800F86FB3 /* World.swift in Sources */,
 				86D42DE01C76E55000F81A74 /* WorldScene.swift in Sources */,
 				861D22611C769B1E00F86FB3 /* WorldView.swift in Sources */,
+				86D42DE41C76EC1B00F81A74 /* PatchSprite.swift in Sources */,
+				86B172B91C76EDB500A01EE9 /* Runtime.swift in Sources */,
 				861D22651C76A3A400F86FB3 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

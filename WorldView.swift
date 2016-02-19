@@ -20,6 +20,3 @@ public class WorldView: SKView {
 	
 }
 
-public class PatchSprite: SKSpriteNode {
-	
-}
